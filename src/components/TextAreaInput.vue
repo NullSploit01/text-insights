@@ -8,12 +8,14 @@
       cols="150"
       outlined
       type="textarea"
+      @update:model-value="updateParams"
     />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { countWords } from "@/utils/count-words";
 const props = defineProps({
   params: {
     type: Object,
@@ -22,4 +24,8 @@ const props = defineProps({
 });
 
 const params = ref(props.params);
+
+const updateParams = () => {
+  params.value.countOfWords = countWords(params.value.inputText);
+};
 </script>

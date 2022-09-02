@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h3 class="heading">Text Insights {{ params.inputText }}</h3>
+    <h3 class="heading">Text Insights {{ params.countOfWords }}</h3>
     <TextAreaInput :params="params" />
   </div>
 </template>
@@ -19,7 +19,9 @@
 <script setup lang="ts">
 import TextAreaInput from "@/components/TextAreaInput.vue";
 import { ref } from "vue";
+
 const params = ref({
   inputText: null,
+  countOfWords: 0,
 });
 </script>
