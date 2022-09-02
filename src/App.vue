@@ -1,8 +1,12 @@
 <script lang="ts" setup>
 import HomeView from "./views/HomeView.vue";
+// import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
+  <!-- <div>
+    <NavBar />
+  </div> -->
   <div class="home">
     <HomeView />
   </div>
@@ -11,8 +15,6 @@ import HomeView from "./views/HomeView.vue";
 <style>
 .home {
   display: flex;
-  place-content: center;
-  height: 100vh;
   flex-direction: column;
 }
 </style>
