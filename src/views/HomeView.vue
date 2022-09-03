@@ -25,5 +25,7 @@ import { ref } from "vue";
 const params = ref({
   inputText: null,
   countOfWords: 0,
+  countOfCharacters: 0,
+  countOfLines: 0,
 });
 </script>

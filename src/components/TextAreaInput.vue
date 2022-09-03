@@ -16,6 +16,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { countWords } from "@/utils/count-words";
+import { countLines } from "@/utils/count-lines";
 const props = defineProps({
   params: {
     type: Object,
@@ -27,5 +28,7 @@ const params = ref(props.params);
 
 const updateParams = () => {
   params.value.countOfWords = countWords(params.value.inputText);
+  params.value.countOfCharacters = params.value.inputText.length;
+  params.value.countOfLines = countLines(params.value.inputText);
 };
 </script>
